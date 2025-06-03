@@ -6,7 +6,7 @@ async function bootstrap() {
 
   // CORS を有効化
   app.enableCors({
-    origin: 'http://localhost:3000', // Reactアプリのオリジンを許可
+    origin: ['http://localhost:5173', 'http://localhost:3000'], // Reactアプリのオリジンを許可
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // 許可するHTTPメソッド
     allowedHeaders: ['Content-Type', 'Authorization'], // 許可するヘッダー
     credentials: true, // クッキーなどの認証情報を含むリクエストを許可
