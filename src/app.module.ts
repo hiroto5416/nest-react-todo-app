@@ -11,6 +11,8 @@ import { AppService } from './app.service';
 import { TodoController } from './todo/todo.controller';
 import { TodoService } from './todo/todo.service';
 import { PrismaService } from './prisma/prisma.service';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 /**
  * AppModule
@@ -31,5 +33,6 @@ import { PrismaService } from './prisma/prisma.service';
     PrismaService, // データベース接続サービス
     TodoService, // Todo機能のサービス
   ],
+  imports: [AuthModule, UsersModule],
 })
 export class AppModule {}
